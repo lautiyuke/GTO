@@ -1,0 +1,185 @@
+.noOrdenes{
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #475569;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ordenes{
+    width: 100%;
+    height: 100%;
+
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.orden{
+    height: 350px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    transition: .4s;
+}
+
+.orden:hover{
+    box-shadow:  0 10px 24px -12px rgb(0 0 0 / .25);
+}
+
+.ordenHeader{
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 10px;
+}
+
+.notiEstado{
+    font-size: .9rem;
+    font-weight: 700;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 32px;
+}
+
+.esperando{
+    color: #64748b;
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+}
+
+.cocinando{
+    color: #22c55e;
+    background-color: #dcfce7;
+    border: 1px solid #bbf7d0;
+}
+
+.completada{
+    color: #3b82f6;
+    background-color: #dbeafe;
+    border: 1px solid #bfdbfe;
+}
+
+.cancelada{
+    color: #ef4444;
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+}
+.horaCreacion{
+    display: flex;
+    column-gap: 4px;
+    justify-content: center;
+    align-items: center;
+
+    color: #757f8e;
+}
+
+.btnNuevaOrden{    
+    display: flex;
+    column-gap: 12px;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 15px;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 8px;
+    background: #000000;
+    color: #ffffff;
+}
+
+.ordenFooter{
+    width: 100%;
+    height: 50px;
+
+    padding: 10px 20px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.avanzarFase{
+    width: calc(100% - 110px);
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #3f3f46;
+    color: #ffffff;
+
+    padding: 5px 0px;
+
+    display: flex;
+    column-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+
+.avanzarFase:hover{
+    background-color: #000000;
+}
+
+.cancelar{
+    width: 96px;
+
+    padding: 8px 0px;
+
+    background: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+
+    transition: .4s;
+}
+
+.cancelar:hover{
+    color: #ef4444;
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+}
+
+
+.bordePunteado{
+    border-color: #e2e8f0;
+    border-style: dotted;
+    border-bottom-width: 0;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+@media screen and (max-width: 950px){
+    .ordenes{
+        max-height: calc(100vh - 250px);
+    }
+}
+
+@media screen and (max-width: 560px){
+    .ordenes{
+        max-height: calc(100vh - 300px);
+    }
+}
+
+@media screen and (max-width: 420px){
+    .ordenes{
+        max-height: calc(100vh - 350px);
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}

@@ -1,0 +1,41 @@
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.linkItem{
+    padding: 5px 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.linkItem:hover{
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 950px){
+    .links{
+        width: 600px;
+        justify-content: space-around;
+    }
+
+    .linkItem{
+        font-size: 1rem;
+        font-weight: 600;
+
+        padding: 10px 10px;
+
+        background: #f8fafc;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .links{
+        width: 100%;
+        flex-wrap: wrap;
+        row-gap: 8px;
+    }
+}
