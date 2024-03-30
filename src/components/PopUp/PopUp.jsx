@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {getOrdenes, setOrdenes} from '../../hooks/useOrdenes.js';
+import {getOrdenes, setOrdenesStorage} from '../../hooks/useOrdenes.js';
 import {BordePunteado} from '../BordePunteado/BordePunteado.jsx';
 import {XIcon} from '../SVGIcons/SVGIcons.jsx';
 import './PopUp.css';
@@ -37,7 +37,7 @@ export const PopUp = () => {
 			closePopUp();
 			let ordenes = getOrdenes();
 			let id;
-			if (ordenes != -1) {
+			if (ordenes != -1 && ordenes.length != 0) {
 				id = ordenes[ordenes.length - 1].id + 1;
 			} else {
 				ordenes = [];
@@ -49,7 +49,8 @@ export const PopUp = () => {
 				productos: productos,
 				estado: 'esperando',
 			});
-			setOrdenes(ordenes);
+			setOrdenesStorage(ordenes);
+			window.location.reload();
 		}
 	};
 

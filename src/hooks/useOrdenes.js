@@ -6,7 +6,6 @@ export const getOrdenes = () => {
 	return parseadas == null ? -1 : parseadas;
 };
 
-export const setOrdenes = (nuevasOrdenes) => {
+export const setOrdenesStorage = (nuevasOrdenes) => {
 	localStorage.setItem('ordenes', JSON.stringify(nuevasOrdenes));
-	window.location.reload();
 };

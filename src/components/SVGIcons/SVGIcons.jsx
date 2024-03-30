@@ -4,7 +4,7 @@ export const Todas = ({color, size = '24'}) => {
 			xmlns='http://www.w3.org/2000/svg'
 			width={size}
 			height={size}
-			fill='currentColor'
+			fill={color}
 			viewBox='0 0 256 256'>
 			<rect width='256' height='256' fill='none' />
 			<rect
@@ -70,7 +70,7 @@ export const Esperando = ({color, size = '24'}) => {
 			xmlns='http://www.w3.org/2000/svg'
 			width={size}
 			height={size}
-			fill='currentColor'
+			fill={color}
 			viewBox='0 0 256 256'>
 			<rect width='256' height='256' fill='none' />
 			<line
@@ -119,7 +119,7 @@ export const Cocinando = ({color, size = '24'}) => {
 			xmlns='http://www.w3.org/2000/svg'
 			width={size}
 			height={size}
-			fill='currentColor'
+			fill={color}
 			viewBox='0 0 256 256'>
 			<rect width='256' height='256' fill='none' />
 			<line
@@ -195,7 +195,7 @@ export const Completada = ({color, size = '24'}) => {
 			xmlns='http://www.w3.org/2000/svg'
 			width={size}
 			height={size}
-			fill='currentColor'
+			fill={color}
 			viewBox='0 0 256 256'>
 			<rect width='256' height='256' fill='none' />
 			<line
@@ -265,7 +265,7 @@ export const Cancelada = ({color, size = '24'}) => {
 			xmlns='http://www.w3.org/2000/svg'
 			width={size}
 			height={size}
-			fill='currentColor'
+			fill={color}
 			viewBox='0 0 256 256'>
 			<rect width='256' height='256' fill='none' />
 			<line
@@ -308,7 +308,7 @@ export const NuevaIcon = ({color}) => {
 			xmlns='http://www.w3.org/2000/svg'
 			width='24'
 			height='24'
-			fill='currentColor'
+			fill={color}
 			viewBox='0 0 256 256'>
 			<rect width='256' height='256' fill='none' />
 			<circle
@@ -373,7 +373,7 @@ export const HoraIcon = ({color}) => {
 			xmlns='http://www.w3.org/2000/svg'
 			width='24'
 			height='24'
-			fill='currentColor'
+			fill={color}
 			viewBox='0 0 256 256'>
 			<rect width='256' height='256' fill='none' />
 			<circle
@@ -403,7 +403,7 @@ export const XIcon = ({color}) => {
 			xmlns='http://www.w3.org/2000/svg'
 			width='16'
 			height='16'
-			fill='currentColor'
+			fill={color}
 			viewBox='0 0 256 256'>
 			<rect width='256' height='256' fill='none' />
 			<line
@@ -422,6 +422,99 @@ export const XIcon = ({color}) => {
 				y1='200'
 				x2='56'
 				y2='56'
+				fill='none'
+				stroke={color}
+				strokeLinecap='round'
+				strokeLinejoin='round'
+				strokeWidth='24'
+			/>
+		</svg>
+	);
+};
+
+export const Tick = ({color}) => {
+	return (
+		<svg
+			xmlns='http://www.w3.org/2000/svg'
+			width='24'
+			height='24'
+			fill={color}
+			viewBox='0 0 256 256'>
+			<rect width='256' height='256' fill='none' />
+			<polyline
+				points='172 104 113.3 160 84 132'
+				fill='none'
+				stroke={color}
+				strokeLinecap='round'
+				strokeLinejoin='round'
+				strokeWidth='16'
+			/>
+			<circle
+				cx='128'
+				cy='128'
+				r='96'
+				fill='none'
+				stroke={color}
+				strokeLinecap='round'
+				strokeLinejoin='round'
+				strokeWidth='16'
+			/>
+		</svg>
+	);
+};
+
+export const Basura = ({color}) => {
+	return (
+		<svg
+			xmlns='http://www.w3.org/2000/svg'
+			width='24'
+			height='24'
+			fill={color}
+			viewBox='0 0 256 256'>
+			<rect width='256' height='256' fill='none' />
+			<line
+				x1='216'
+				y1='60'
+				x2='40'
+				y2='60'
+				fill='none'
+				stroke={color}
+				strokeLinecap='round'
+				strokeLinejoin='round'
+				strokeWidth='24'
+			/>
+			<line
+				x1='104'
+				y1='104'
+				x2='104'
+				y2='168'
+				fill='none'
+				stroke={color}
+				strokeLinecap='round'
+				strokeLinejoin='round'
+				strokeWidth='24'
+			/>
+			<line
+				x1='152'
+				y1='104'
+				x2='152'
+				y2='168'
+				fill='none'
+				stroke={color}
+				strokeLinecap='round'
+				strokeLinejoin='round'
+				strokeWidth='24'
+			/>
+			<path
+				d='M200,60V208a8,8,0,0,1-8,8H64a8,8,0,0,1-8-8V60'
+				fill='none'
+				stroke={color}
+				strokeLinecap='round'
+				strokeLinejoin='round'
+				strokeWidth='24'
+			/>
+			<path
+				d='M168,60V36a16,16,0,0,0-16-16H104A16,16,0,0,0,88,36V60'
 				fill='none'
 				stroke={color}
 				strokeLinecap='round'
