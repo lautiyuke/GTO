@@ -136,7 +136,18 @@ export const Ordenes = ({estado = ''}) => {
 					</>
 				);
 			case 'completada':
-				return <></>;
+				return (
+					<button
+						onClick={() => {
+							handleAvanzarFase(orden.id, 'cancelada');
+						}}
+						className='eliminarBtn eliminarCompletadaBtn'
+						onMouseEnter={() => handleEliminarMouseEnter(orden.id)}
+						onMouseLeave={handleEliminarMouseLeave}>
+						<Basura color={hoverEliminarId === orden.id ? 'blue' : '#000000'} />
+						Eliminar
+					</button>
+				);
 			case 'cancelada':
 				return (
 					<button

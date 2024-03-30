@@ -173,10 +173,16 @@
     padding: 8px 0px;
 }
 
+
 .eliminarBtn:hover, .eliminarBtn:hover > svg{
     color: #dc2626;
     border: none;
     background-color: #fee2e2;
+}
+
+.eliminarCompletadaBtn:hover, .eliminarCompletadaBtn:hover > svg{
+    color: #1d4bbe;
+    background-color: #bcbeff;
 }
 
 
