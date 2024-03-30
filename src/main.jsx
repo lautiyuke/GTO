@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import {Navbar} from './components/Navbar/Navbar.jsx';
 import {Footer} from './components/Footer/Footer.jsx';
-import {HashRouter} from 'react-router-dom';
+import {PopUp} from './components/PopUp/PopUp.jsx';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -11,5 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 		<Navbar />
 		<App />
 		<Footer />
+		<PopUp />
+		<div className='filtro' id='filtro'></div>
 	</React.StrictMode>,
 );

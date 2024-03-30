@@ -5,3 +5,8 @@ export const getOrdenes = () => {
 	const parseadas = JSON.parse(ordenesGuardadas);
 	return parseadas == null ? -1 : parseadas;
 };
+
+export const setOrdenes = (nuevasOrdenes) => {
+	localStorage.setItem('ordenes', JSON.stringify(nuevasOrdenes));
+	window.location.reload();
+};

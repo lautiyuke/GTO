@@ -1,0 +1,192 @@
+.popup{
+    width: 650px;
+    
+    max-width: 100vw;
+    z-index: 100;
+
+    background-color: #ffffff;
+    border-radius: 12px;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.headerPopUp{
+    width: 100%;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bodyPopUp{
+    width: 100%;
+
+    padding: 0px 20px;
+
+    display: flex;
+    column-gap: 20px;
+}
+
+.izquierdaPopUp{
+    width: 70%;
+}
+
+.inputsNueva{
+    width: 100%;
+
+    padding: 10px 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputsNueva input{
+    height: 30px;
+    border: 2px solid #f1f5f9;
+    border-radius: 8px;
+    padding: 18px 18px;
+}
+
+.inputsNueva input[type=text]{
+    width: 70%;
+    font-size: 1rem;
+}
+
+.inputsNueva input[type=number]{
+    width: 27%;
+    font-size: 1rem;
+}
+
+.btnPopUp{
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.agregarProducto{
+    border: 1px solid #e2e8f0;
+    background-color: #f1f5f9;
+}
+
+.enviarOrden{
+    padding: 14px 0px;
+    background-color: #4c4c4c;
+    color: #ffffff;
+}
+
+.derechaPopUp{
+    height: 100%;
+    min-height: 202px;
+    width: 30%;
+
+    padding: 10px 0px;
+    margin: 10px 0px 12px 0px;
+
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+
+    background-color: #f8fafc;
+    border-radius: 12px;
+}
+
+.derechaPopUp > p{
+    margin-bottom: 5px;
+}
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.itemLista{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.headerPopUp button{
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    cursor: pointer;
+}
+
+.filtro {
+    z-index: 30;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #646464ed;
+    opacity: 1;
+    top: 90px;
+    display: none;
+}
+
+.filtro.mostrar {
+    display: block;
+}
+
+
+@media screen and (max-width: 950px) {
+    .filtro{
+        top: 142px;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .popup{
+        width: 310px;
+        max-width: 100vw;
+        height: fit-content;
+    }
+
+    .bodyPopUp{
+        flex-direction: column;
+    }
+
+    .izquierdaPopUp, .derechaPopUp {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .filtro{
+        top: 192px;
+    }
+}
+
+@media screen and (max-width: 315px) {
+    .filtro{
+        top: 240px;
+    }
+    
+}

@@ -22,12 +22,17 @@ export const Footer = () => {
 		return `${horas}:${minutos}:${segundos}`;
 	};
 
+	const abrirPopUp = () => {
+		document.getElementById('popup').classList.toggle('open-popup');
+		document.getElementById('filtro').classList.toggle('mostrar');
+	};
+
 	return (
-		<footer className='footer'>
+		<footer className='footer' id='footer'>
 			<div className='horaContainer'>
 				<p>{obtenerHoraFormateada()}</p>
 			</div>
-			<button className='btnNuevaOrden'>
+			<button className='btnNuevaOrden' onClick={abrirPopUp}>
 				<NuevaIcon color='white' />
 				Nueva orden
 			</button>
